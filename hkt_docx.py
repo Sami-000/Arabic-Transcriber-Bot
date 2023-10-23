@@ -15,7 +15,7 @@ def chunkify_text(text, chunk_size=2735):
     return chunks                                             
 with open(txtfile, "r") as file:
     input_text = file.read()
-    url = 'http://www.7koko.com/api/tashkil/index.php'  # اضف هنا عنوان الموقع المحدد
+    url = 'http://www.7koko.com/api/tashkil/index.php'
        
 headers = {
     'User-Agent': 'Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36',
