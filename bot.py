@@ -15,7 +15,7 @@ received_files = 0
 
 @app.on_message(filters.command('start'))
 def start(client, message):
-    client.send_message(message.chat.id, 'السلام عليكم، يمكنك إرسال ملف صوتي أو فيديو لتحويله إلى نص.')
+    client.send_message(message.chat.id, 'السلام عليكم، يمكنك إرسال ملف صوتي أو فيديو لتحويله إلى نص. \n\n سورس كود البوت:\n https://github.com/Sami-000/Arabic-Transcriber-Bot', disable_web_page_preview=True)
 
 @app.on_message(filters.voice | filters.audio | filters.video)
 def speech_to_text(client, message):
