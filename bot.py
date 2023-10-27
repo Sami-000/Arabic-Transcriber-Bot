@@ -41,10 +41,10 @@ def speech_to_text(client, message):
     output_filename = f'{file_path}.txt'
 
     #  تحويل الصوت إلى نص عن طريق  wit.ai
-    voice2txt = f'python3 speech.py {api_key} {input_filename} {output_filename}'
+    voice2txt = f'python3 speech.py {api_key} "{input_filename}" "{output_filename}"'
     os.system(voice2txt)
     #  تشكيل النص وتحويله إلى Docx
-    txt2doc = f'python3 hkt_docx.py {output_filename} && rm -f {output_filename}'
+    txt2doc = f'python3 hkt_docx.py "{output_filename}" && rm -f "{output_filename}"'
     os.system(txt2doc)
 
     output_filename = f'{file_path}.docx'
